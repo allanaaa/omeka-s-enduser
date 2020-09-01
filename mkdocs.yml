@@ -37,6 +37,7 @@ pages:
         - 'CSS Editor': 'modules/csseditor.md'
         - 'CSV Import': 'modules/csvimport.md'
         - 'Custom Vocab': 'modules/customvocab.md'
+        - 'Data Cleaning': ]modules/datacleaning.md'
         - 'DSpace Connector': 'modules/dspaceconnector.md'
         - 'Extract Text' : 'modules/extracttext.md'
         - 'Fedora Connector': 'modules/fedoraconnector.md'
