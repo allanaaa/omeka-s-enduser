@@ -7,7 +7,7 @@ Before you begin your import, be sure that you have prepared your csv file follo
 
 Start an import by clicking on the CSV Importer tab on the left-hand navigation. This will open the initial Import Settings page. 
 
-![A red arrow points to CSV Importer in the navigation](../modules/modulesfiles/csvimport_nav.png)
+![A red arrow points to CSV Importer in the navigation](../../modules/modulesfiles/csvimport_nav.png)
 
 - For the Spreadsheet option, use the *Choose File* button to select the file from your computer. 
 - From the *CSV Column delimiter* dropdown, choose from the following options (this should match the formatting of your file)
@@ -30,14 +30,13 @@ Start an import by clicking on the CSV Importer tab on the left-hand navigation.
 
 - Comments are useful as they appear on the "Past Imports" page; make a note about what is being imported and any settings you may have on this page. 
 
-![Import settings as described, no entries](../modules/modulesfiles/csvimport_settings.png)
+![Import settings as described, no entries](../../../modules/modulesfiles/csvimport_settings.png)
 
 Click the *next* button to continue with the import process.
 
-## Import mapping and settings
-Once you click next, a new page will load with the following tabs:
+Once you click next, a new page will load with tabs for mapping the data and with basic and advanced settings. 
 
-###  Map to Omeka S data
+##  Map to Omeka S data
 This tab displays a table with the columns from your spreadsheet as rows. Each row displays:
 
 - a Checkbox
@@ -47,23 +46,23 @@ This tab displays a table with the columns from your spreadsheet as rows. Each r
 - A trash can to delete mappings
 - A column to show options selected
 
-![Mappings for a spreadsheet with ten columns. Some of the columns, such as those named Description and Title have automatically been mapped to Dublin Core properties.](../modules/modulesfiles/csvimport_itemsMap1.png)
+![Mappings for a spreadsheet with ten columns. Some of the columns, such as those named Description and Title have automatically been mapped to Dublin Core properties.](../../../modules/modulesfiles/csvimport_itemsMap1.png)
 
-#### Mapping options
+### Mapping options
 
 To map a column header to a vocabulary property, click on the plus symbol button to the left of the column header. This will open a drawer on the right-hand side of the screen. 
 
-![A red arrow points to the plus sign button to the left of the word "title"](../modules/modulesfiles/csvimport_itemsMapButton.png)
+![A red arrow points to the plus sign button to the left of the word "title"](../../../modules/modulesfiles/csvimport_itemsMapButton.png)
 
 The drawer has multiple options for mapping:
 
 **Properties** select a property to map the column data to, from any of the installed vocabularies. Use the Filter field to search the available properties for a specific property.
 
-![Properties option open showing all of the installed vocabularies for the Omeka S installation: Dublin Core, Bibliographic Ontology, Friend of a Friend, Scripto and OWL-Time Ontology.](../modules/modulesfiles/csvimport_itemsMapProp.png)
+![Properties option open showing all of the installed vocabularies for the Omeka S installation: Dublin Core, Bibliographic Ontology, Friend of a Friend, Scripto and OWL-Time Ontology.](../../../modules/modulesfiles/csvimport_itemsMapProp.png)
 
 **Item-specific data** has a dropdown to set Item Set by selected property. If you have a column with data for an Item Set to which you want to add the item, you can set how it maps using this dropdown. You can either use the Item Set's internal ID, or any one of its properties (title, description).
 
-![dropdown as described](../modules/modulesfiles/csvimport_itemsMapISD.png)
+![dropdown as described](../../../modules/modulesfiles/csvimport_itemsMapISD.png)
 
 **Generic data** also has a dropdown where you can set one of four options:
 
@@ -72,7 +71,7 @@ The drawer has multiple options for mapping:
 - *Owner (by email address):* set an item's owner by email address. This must be the email address associated with the user's account in the Omeka S installation.
 - *Visibility public/private:* set the visibility of the item. Use "private" or "public" in the spreadsheet. 
 
-![Dropdown as described](../modules/modulesfiles/csvimport_itemsMapgeneric.png)
+![Dropdown as described](../../../modules/modulesfiles/csvimport_itemsMapgeneric.png)
 
 **Media source** If the column in your spreadsheet is a media source, select which kind from the dropdown: 
 
@@ -82,7 +81,7 @@ The drawer has multiple options for mapping:
 - URL
 - YouTube (link)
 
-![Dropdown as described](../modules/modulesfiles/csvimport_itemsMapMedia.png)
+![Dropdown as described](../../../modules/modulesfiles/csvimport_itemsMapMedia.png)
 
 Be sure to click the "Apply Changes" at the bottom of the drawer or nothing you set here will be kept.
 
@@ -90,10 +89,10 @@ To remove a mapping, click the trash can icon in the row for that data mapping. 
 
 If you have data in a column in your CSV which you do not want to bring in to your Omeka S installation, simply do not map that column to a property or data type.
 
-#### Column options
+### Column options
 To access options for data in a column of your csv (represented by a row in the import table), click the wrench icon for that column heading. 
 
-![A red arrow points to the wrench button to the left of the word "title"](../modules/modulesfiles/csvimport_itemsMapOptions.png)
+![A red arrow points to the wrench button to the left of the word "title"](../../../modules/modulesfiles/csvimport_itemsMapOptions.png)
 
 Column options are in addition to mappings. If you add options without also mapping column data to resource, media, or other data, nothing will be imported. 
 
@@ -108,23 +107,23 @@ This will open a drawer on the right side of the browser window with the followi
 	- If you have certain modules installed, such as Numeric Data Types, there may be additional data type options supplied by those modules.
 - **Import values as private**: check this box to set all property values *in this column* private.
 
-![drawer with options as described above](../modules/modulesfiles/csvimport_ItemColOpt.png)
+![drawer with options as described above](../../../modules/modulesfiles/csvimport_ItemColOpt.png)
 
 Be sure to click the Apply Changes button at the bottom of the drawer in order to save your changes. 
 
 To remove a column option setting, click the wrench icon again and undo your changes manually.
 
-#### Batch edit
+### Batch edit
 When you select one or more rows in the table (columns from your csv file), you can use the "Batch edit options" button to apply the column options described above - multivalue separator, language, data type, and property privacy - to multiple csv columns at once. 
 
-![a screenshot of the Mapping tab, with the boxes for Columns Title and Creator checked. A red arrow points to the Batch edit options button. On the right side of the screen, a drawer offers options for changing the settings as described](../modules/modulesfiles/csvimport_batchEditItems.png)
+![a screenshot of the Mapping tab, with the boxes for Columns Title and Creator checked. A red arrow points to the Batch edit options button. On the right side of the screen, a drawer offers options for changing the settings as described](../../../modules/modulesfiles/csvimport_batchEditItems.png)
 
 Be sure to click the Apply Changes button at the bottom of the drawer in order to save your changes. 
 
-### Item import Basic Settings
+## Item import Basic Settings
 These settings apply to the entire csv which you are importing. Note that some of these settings can be overwritten by column options in the Map to Omeka S data tab. 
 
-![options as described below](../modules/modulesfiles/csvimport_itemsbasic.png)
+![options as described below](../../../modules/modulesfiles/csvimport_itemsbasic.png)
 
 - **Resource Template:** select a resource template from the drop-down menu to apply to the imported items. You can use the search field at the top of the dropdown to narrow results or find a particular template.
 - **Class:** select a class from the drop-down menu to apply to the imported items. You can use the search field at the top of the dropdown to narrow results or find a particular class.
@@ -135,13 +134,13 @@ These settings apply to the entire csv which you are importing. Note that some o
       - The columns of data in your CSV should be separated by commas, however within those columns you can add a special character to create multiple inputs, for example a semicolon.
 - **Language:** set the language of the values in the spreadsheet using the appropriate [IETF Language tag](https://en.wikipedia.org/wiki/IETF_language_tag).
 
-### Item import Advanced Settings
+## Item import Advanced Settings
 
 There are two options on this tab which are only for advanced use. 
 
-![Advanced settings page showing only the Action dropdown and the field for number of rows to process. ](../modules/modulesfiles/csvimport_ItemsAdvanced.png)
+![Advanced settings page showing only the Action dropdown and the field for number of rows to process. ](../../../modules/modulesfiles/csvimport_ItemsAdvanced.png)
 
-#### Action
+### Action
 
 This setting allows you to change the action of process from a straight import to one of the following options:
 
@@ -163,7 +162,7 @@ If you select one of these options from the dropdown, three additional settings 
 	- Skip the row 
 	- Create a new resource
 
-#### Other advanced settings
+### Other advanced settings
 
 In addition to the above, the Advanced Settings tab has an option to set the number of rows to process by batch. By default this is set to 20. However, if you are running into errors with an import you may want to set it to 5 or even 1 in order to troubleshoot and determine the source of the error. 
 

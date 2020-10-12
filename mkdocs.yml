@@ -35,7 +35,10 @@ pages:
         - 'Modules Management': 'modules/index.md'
         - 'Collecting': 'modules/collecting.md'
         - 'CSS Editor': 'modules/csseditor.md'
-        - 'CSV Import': 'modules/csvimport.md'
+        - 'CSV Import': 
+            - 'Import setup and updates': 'modules/csvimport/index.md'
+            - 'Import items': 'modules/csvimport/csvimport_items.md'
+            - 'Import item sets': 'modules/csvimport/csvimport_itemsets.md'
         - 'Custom Vocab': 'modules/customvocab.md'
         - 'DSpace Connector': 'modules/dspaceconnector.md'
         - 'Extract Text' : 'modules/extracttext.md'
