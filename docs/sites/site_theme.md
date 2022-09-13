@@ -1,18 +1,29 @@
-# Theme Selection
+# Themes
 
-The Theme section of the Site menu allows you to select the theme for your site, and to set theme-specific settings. 
+The Theme section of each Site menu allows you to select the theme for your site, and to set theme-specific settings. Each site on your Omeka S installation can have a separate theme and numerous customizations. A fresh Omeka S install comes with one theme, called Default.
 
-## Install a theme
+## Installing themes
 In order to appear on the **Themes** page for sites, themes must be manually added to the `/themes` folder of the installation, using an FTP program or an SSH connection.
 
-To add a theme to the site using FTP:
+To add a theme to the site using FTP or an in-browser File Manager tool:
 
 1. Download the zipped theme to your computer.
 1. Open your FTP client, log on to the server that houses the Omeka S install and navigate to the `/themes` folder (this should be located in the main folder of the install).
-1. Upload the zipped theme to the `/themes` folder .
+1. Upload the zipped theme to the `/themes` folder.
 1. Unzip the theme.
+1. You can delete the zipped file if it remains on your server.
+1. When you navigate to the Themes page of the Sites menu, you should see your newly added theme represented there. 
 
-You can also use git to clone a theme directly from the git repository. Do this only if you are comfortable with git.
+Some FTP programs do not allow you to unzip a compressed file after uploading. In this case:
+
+1. Extract or unzip the theme on your computer after downloading.
+1. Upload the unzipped folder to the `/themes` folder. Make sure not to upload any folders called `[themename]-master`, `theme-[themename]-v0.0.0`, or anything other than simply the name of the theme itself.
+1. When you navigate to the Themes page of the Sites menu, you should see your newly added theme represented there. 
+
+!!! note
+	The folder that appears in the `/themes` folder should show the name of the theme, without any version numbers. If you are having issues installing a theme, check that you have unzipped the theme correctly, without creating extra folder levels.
+
+You can also use SSH to clone a theme directly from that theme's git repository. Do this only if you are comfortable with git, GitHub, and working with SSH. You can find links to each theme's GitHub repository on [our website's Themes directory](https://omeka.org/s/themes/){target=_blank} - click on a theme and look above the version history table.
 
 ## Select a theme
 
@@ -22,9 +33,9 @@ A large image of the active theme appears on the left, with the theme title, ver
 
 ![Theme tab with Center Row as the current theme](../sites/sitesfiles/sitetheme_tab.png)
 
-Below the current theme are tiles for all other installed themes. The tiles have a small image of the theme in action, the theme name and version, and a link to the creator of the theme. 
+Below the current theme are tiles for all other installed themes. The tiles have a small image of the theme in action, the theme name and version, and a link to the creator of the theme.
 
-To switch themes, click on the theme which you want to use. It will highlight slightly in gray, with a checkbox in the lower right-hand corner of the theme tile. 
+To switch themes, click on the theme you want to use. It will highlight slightly in gray, with a checkbox in the lower right-hand corner of the theme tile.
 
 ![A selected theme showing the highlight and checkmark](../sites/sitesfiles/sites_themeselect.png)
 
@@ -32,7 +43,7 @@ Click the "Save" button in the upper right-hand corner of the window to save cha
 
 ## Theme settings
 
-Theme settings allow you to customize aspects of the site's theme, such as adding a logo to the top or writing footer text. 
+Theme settings allow you to customize aspects of the site's theme, such as adding a logo to the top or writing footer text.
 
 To edit the settings of your selected theme, click on the button labeled "Edit theme settings" to the right of the current theme thumbnail.
 
@@ -49,11 +60,9 @@ Upload a asset (file) to function as a logo in the header of your site. Allowed 
 
 This asset is not associated with any of the items, and will be stored separately; once uploaded to a site you will be able to select it again without re-uploading even if you change themes for a while. Any asset uploaded to one site will be available for all sites on the installation.
 
-![Logo option](../sites/sitesfiles/sitetheme_logo.png)
-
 To upload a logo, click the "Select" button. This will open a sidebar where you can either upload a new file from your computer or choose from assets already uploaded to the installation.
 
-![Logo option with sidebar open](../sites/sitesfiles/sitetheme_logo2.png)
+![Logo option with sidebar open](../sites/sitesfiles/sitetheme_logo.png)
 
 Note that the logo completely replaces the header, including the site title, for the site, so you may want to consider an image with text if it is important to you that users see the site title.
 
@@ -65,22 +74,17 @@ To remove a logo, click the "Clear" button in that block (only visible when a lo
 
 A text field in which you can enter content to appear in the footer of the site.
 
-![footer text field with prompt visible](../sites/sitesfiles/sitetheme_footer.png)
-
 By default the message is "Powered by Omeka S." 
 
 You can add HTML formatting to the text by manually adding the tags. 
 
-
-#### Top Navigation Depth
+#### Top navigation depth
 
 (Default, Cozy, Foundation)
 
 Top Navigation Depth allows you the limit the depth of the top navigation menu on the public side of the site.  The default setting, 0, does not restrict the number of levels of the top navigation menu. Setting it to one would only show the top-level pages or links of your site.
 
-![Theme settings with Top Navigation depth at 0](../sites/sitesfiles/sitetheme_depth.png)
-
-#### Color Selection
+#### Color selection
 
 (Default, Cozy, The Daily)
 
@@ -88,19 +92,19 @@ The themes Default, Cozy, and The Daily include an option to enter values for th
 
 ![color option fields](../sites/sitesfiles/sitetheme_color.png)
 
-The Main Accent color is used for link text and on-hover colors, as in the image below: 
+The Main Accent color is used for link text and on-hover colors, as in the image below:
 
 ![arrow points to instances of main accent color in use](../sites/sitesfiles/sitetheme_mainaccent.png)
 
-The navigation background color sets the color of the navigation sidebar for the theme. 
+The navigation background color sets the color of the navigation sidebar for the theme.
 
 ![arrow points to sidebar](../sites/sitesfiles/sitetheme_navcolor.png)
 
 Edit either field by typing a color value into the field. Either a triplet or a six-character hexadecimal code will work. Once you have entered a valid value, the color bar on the left will automatically update to show the color entered, even without saving changes.
 
-The default values are stored in the prompt text for the field. For the Cozy theme, the default values are: the main accent color is `087b94` and the navigation background color is `bfdcdc`.
+The default values are stored in the prompt text for the field. For the Cozy theme, the main accent color is `087b94` and the navigation background color is `bfdcdc`.
 
-### Layout for browse pages 
+### Layout for browse pages
 
 (Center Row, Foundation)
 

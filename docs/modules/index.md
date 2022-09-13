@@ -5,9 +5,9 @@ Modules extend the functionality of your Omeka S installation and sites. A list 
 !!! Note
     Not every module will work with every version of Omeka, especially newer modules on old installations. Older versions of modules may be available on their Github pages. Use the Modules Directory to find the "Github" link on the right side of the screen for each plugin, then look on the right hand side of the Github page for the "Releases" section.
 
-![Screen capture of admin dashboard showing Modules tab active.](modulesfiles/modulesbrowse.png)
-
 To manage the modules installed on your Omeka S site, click on the **Modules** section in the left-hand navigation of your [admin dashboard](../admin-dashboard.md).
+
+![A screenshot of the Modules page and sidebar.](modulesfiles/modulesbrowse.png)
 
 Note that only [Global Administrators](../admin/users.md) can install and manage modules; Supervisors can browse installed modules but not modify them. Other users do not have access to this tab.
 
@@ -19,30 +19,30 @@ Multiple buttons can appear to the right of a module’s label. Each button has 
 - **Activate/Deactivate** (sliding switch): when a module is active, the slider area background is transparent and the switch is to the left. When inactive, the background of the slider area background is opaque and the switch is to the right.
 - **Install/Uninstall** (arrow and rectangle): use this button to install or uninstall a module. When the button is green and the arrow points down, you can install the module. When the button is red and the arrow points up, you can uninstall the module.
 
-![Icons described above, from right to left: configure, activate and deactivate, install and uninstall](modulesfiles/moduleButtons.png)
-
-When a module has a new release, it will display on the browse page with a message in green stating "A new version of this module is available. Get the new version." There will be a link to the download page for the module. [Follow the steps below to update a module](#updating-a-module). These warnings only show up on installed and activated modules. You can [toggle these notifications on the settings page](../admin/settings.md#general).
-
-![A list of modules in different states. One is uninstalled, one is installed but not active, two are active but only one is showing a Configure button. The last module on the list has a "new version" banner in green.](modulesfiles/moduleUpdatemsg.png)
-
 ## Adding modules to Omeka S
 In order to appear in the **Modules** section of the admin dashboard for your Omeka S installation, module files must be manually added to the `/modules` folder of the installation, using an FTP program or SSH connection.
 
 Modules registered with Omeka are available on the [Modules](https://omeka.org/s/modules/){target=_blank} directory of the Omeka S site. Other modules may be made available by their authors in other locations.
 
-To add a module to the site using FTP:
+To add a module to the site using FTP or an in-browser File Manager tool:
 
 1. Download the zipped module to your computer.
 1. Open your FTP client, log on to the server that houses the Omeka S install, and navigate to the `/modules` folder (this should be located in the main folder of the install).
 1. Upload the zipped module to the `/modules` folder .
 1. Unzip the module.
 
+Some FTP programs do not allow you to unzip a compressed file after uploading. In this case:
+
+1. Extract or unzip the module on your computer after downloading.
+1. Upload the unzipped folder to the `/modules` folder. Make sure not to upload any folders called `[modulename]-master`, `module-[modulename]-v0.0.0`, or anything other than simply the name of the module itself.
+1. When you navigate to the Modules page of the installation, you should see your newly added module represented there. 
+
 !!! note
 	The folder that appears in the `/modules` folder should show the name of the module, without any version numbers. If you are having issues installing a module, check that you have unzipped the module correctly, without creating extra folder levels.
 
 Please note that if you are downloading the folder for a module from GitHub rather than the [Module Directory](https://omeka.org/s/modules/){target=_blank}, you need to be sure to download the [latest release](https://help.github.com/en/articles/linking-to-releases){target=_blank} rather than the version in active development. If you are unsure how to do this, please consult the [GitHub help files](https://help.github.com/en){target=_blank}.
 
-You can also use SSH to clone a module directly from that module's git repository. Do this only if you are comfortable with git, GitHub, and working with SSH.
+You can also use SSH to clone a module directly from that module's git repository. Do this only if you are comfortable with git, GitHub, and working with SSH. You can find links to each module's GitHub repository on [our website's Modules directory](https://omeka.org/s/modules/){target=_blank} - click on a module and look above the version history table.
 
 ### Installing modules
 To install a module, navigate to the Modules tab on the left-hand navigation of the admin dashboard of your Omeka S installation.
@@ -77,6 +77,11 @@ Removing a module is essentially installing in reverse:
 The uninstalled module will continue to appear on your Modules page (with the option to install it) unless the folder for the module is removed from the `/modules` folder on the Omeka S installation, which can be done via FTP or SSH.
 
 ## Updating a module
+
+When a module has a new release, it will display on the browse page with a message in green stating "A new version of this module is available. Get the new version." There will be a link to the download page for the module. [Follow the steps below to update a module](#updating-a-module). These warnings only show up on installed and activated modules. You can [toggle these notifications on the settings page](../admin/settings.md#general).
+
+![A list of modules in different states. One is uninstalled, one is installed but not active, two are active but only one is showing a Configure button. The last module on the list has a "new version" banner in green.](modulesfiles/moduleUpdatemsg.png)
+
 To update a module using FTP:
 
 1. From the Modules tab on your Omeka S installation, deactivate the module you're going to update.
