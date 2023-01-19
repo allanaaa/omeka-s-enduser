@@ -20,7 +20,7 @@ When configuring the module, you can:
 
 When you are finished configuring the module, click the "Submit" button in the upper right corner of the screen.
 
-![Extract Metadata module configuration view with JSON Pointer crosswalk and submit button indicated by a teal arrow](../modules/modulesfiles/extractMetadata_config.png)
+![Extract Metadata module configuration view with JSON Pointer crosswalk and submit button indicated by a teal arrow](modulesfiles/extractmetadata_config.png)
 
 ## Adding media
 
@@ -44,7 +44,7 @@ When editing a media/item, a user can choose to perform a number of actions, acc
 - Map metadata: Map extracted metadata to resource values
 - Delete metadata: Delete extracted metadata.
 
-![Item edit view with the Extract metadata tab active and the actions dropdown menu open](../modules/modulesfiles/extractMetadata_actions.png)
+![Item edit view with the Extract metadata tab active and the actions dropdown menu open](modulesfiles/extractmetadata_actions.png)
 
 Be sure to click the "Save" button in the top right corner of the screen to execute the selected action.
 
@@ -52,7 +52,7 @@ Be sure to click the "Save" button in the top right corner of the screen to exec
 
 From the Items Browse screen, select the items you would like to batch edit. From the batch edit page, you can select any of the four action options from the "Extract metadata" dropdown menu. This will perform the action on all items selected for inclusion in the batch edit. 
 
-![Batch edit view with Extract metadata dropdown open](../modules/modulesfiles/extractmetadata_batchedit.png)
+![Batch edit view with Extract metadata dropdown open](modulesfiles/extractmetadata_batchedit.png)
 
 ## Extractors
 
@@ -78,8 +78,6 @@ Used to extract many types of metadata from many types of files. Requires the [A
 
 Mappers map extracted metadata to resource values. Note that a mapper must be enabled on the module configuration page. This module comes with one mapper, but more can be added depending on your needs.
 
-<!--- how? with modules? --->
-
 ### JSON pointer
 
 You can map extracted metadata to media metadata properties using [JSON pointers](https://datatracker.ietf.org/doc/html/rfc6901){target=_blank}. You must define your own metadata crosswalk in the module configuration page under the "JSON Pointer crosswalk" tab.
@@ -95,6 +93,6 @@ Set up the mapper as follows:
 + Property: "Dublin Core : Date Created"
 + Replace values: [checked or unchecked].
 
-![Extract Metadata module configuration view with JSON Pointer crosswalk and submit button indicated by a teal arrow](../modules/modulesfiles/extractMetadata_config.png)
+![Extract Metadata module configuration view with JSON Pointer crosswalk and submit button indicated by a teal arrow](modulesfiles/extractmetadata_config.png)
 
 Once you've saved this map, perform the "Map metadata" action on one file or in a batch, and, if your JPEG file includes `DateTimeOriginal`, the media should now have a "Date Created" value.
